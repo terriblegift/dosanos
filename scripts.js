@@ -1,8 +1,8 @@
 document.getElementById('randomMp3Btn').addEventListener('click', function() {
     const audioFiles = [
-        'audio1.mp3',  // Replace these with actual file paths
-        // 'audio2.mp3',
-        // 'audio3.mp3',
+        'jasperlion.mp3',  // Replace these with actual file paths
+        'elvisworm.mp3',
+        'piedpiper.mp3',
         // 'audio4.mp3',
         // 'audio5.mp3',
         // 'audio6.mp3',
