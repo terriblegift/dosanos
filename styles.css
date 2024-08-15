@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: #fff;
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+#backgroundVideo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+
+.container {
+    text-align: center;
+    z-index: 1;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+#randomMp3Btn {
+    background-color: #ff69b4;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    margin-bottom: 20px;
+}
+
+#randomMp3Btn:hover {
+    background-color: #ff1493;
+}
+
+.gift-box {
+    display: none;
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    perspective: 800px;
+}
+
+.lid {
+    width: 100%;
+    height: 100%;
+    background-color: #ff69b4;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: bottom center;
+    transition: transform 0.8s ease-out;
+    z-index: 2;
+}
+
+.box {
+    width: 100%;
+    height: 100%;
+    background-color: #ff1493;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid #ff69b4;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.bowtie {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 50px solid #ff69b4;
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.audio-container {
+    display: none;
+    margin-top: 20px;
+    z-index: 3;
+}
+
+.show-gift {
+    display: block;
+}
+
+.open-lid {
+    transform: rotateX(-150deg);
+}
+
+.show-audio {
+    display: block;
+}
