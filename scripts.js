@@ -5,8 +5,8 @@ document.getElementById('randomMp3Btn').addEventListener('click', function() {
         'jasperlion.mp3',  // Replace these with actual file paths
         'elvisworm.mp3',
         'piedpiper.mp3',
-        // 'audio4.mp3',
-        // 'audio5.mp3',
+        'butterfly.mp3',
+        'princesspea.mp3',
         // 'audio6.mp3',
         // 'audio7.mp3',
         // 'audio8.mp3',
