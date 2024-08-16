@@ -1,4 +1,5 @@
 let lastPlayedIndex = -1; 
+
 document.getElementById('randomMp3Btn').addEventListener('click', function() {
     document.getElementById('backgroundMusic').volume = 0.075;  // Adjust volume as needed
     const audioFiles = [
@@ -19,6 +20,17 @@ document.getElementById('randomMp3Btn').addEventListener('click', function() {
     if (backgroundMusic.paused) {
         backgroundMusic.play();
     }
+    const muteBtn = document.getElementById('muteBtn');
+
+    muteBtn.addEventListener('click', function() {
+        if (backgroundMusic.muted) {
+            backgroundMusic.muted = false;
+            muteBtn.textContent = '🔊'; // Change icon to unmute
+        } else {
+            backgroundMusic.muted = true;
+            muteBtn.textContent = '🔇'; // Change icon to mute
+        }
+    });
 
     let randomIndex;
     do {
@@ -62,3 +74,4 @@ document.getElementById('randomMp3Btn').addEventListener('click', function() {
         }, 100); // Delay to smoothly transition the reveal
     }, 3010); // Duration matching the width transition of the loading bar (3000ms + 10ms delay)
 });
+
