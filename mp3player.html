@@ -3,31 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random MP3 Player</title>
     <link rel="stylesheet" href="styles.css">
+    <title>MP3 Player</title>
 </head>
 <body>
+    <!-- Video Background -->
     <div class="video-background">
-        <video autoplay muted loop id="backgroundVideo">
-            <source src="backgroundvideo.mp4" type="video/mp4">
+        <video id="backgroundVideo" autoplay muted loop>
+            <source src="background-video.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>
+
+    <!-- Main Content -->
     <div class="container">
-        <h1>Play a Random MP3</h1>
-        <button id="randomMp3Btn">Play a Random Track</button>
-        <div id="giftBox" class="gift-box">
-            <div class="lid"></div>
-            <div class="box">
-                <div class="bowtie"></div>
-                <div class="audio-container">
-                    <audio id="audioPlayer" controls>
-                        Your browser does not support the audio element.
-                    </audio>
-                </div>
-            </div>
+        <h1>Let me tell you a little story...</h1>
+        <button id="randomMp3Btn">start reading</button>
+
+        <div id="loadingBarContainer" class="loading-bar-container">
+            <div id="loadingBar" class="loading-bar"></div>
+        </div>
+
+        <div id="mp3Container" class="mp3-container">
+            <audio id="audioPlayer" controls>
+                <source src="" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
         </div>
     </div>
+
+    <!-- Background Music (initially paused) -->
+    <audio id="backgroundMusic" loop>
+        <source src="background.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
 
     <script src="scripts.js"></script>
 </body>
